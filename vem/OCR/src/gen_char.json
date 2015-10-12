@@ -1,0 +1,16 @@
+{
+  "segments":
+  [
+    {
+      "top":"True",
+      "left":"True",
+      "little":"True",
+      "straight":"True",
+      "line":"True",
+      "rightSidedLine":"True",
+      "rightSidedCurve":"True"
+    }
+    
+  ]
+  
+}

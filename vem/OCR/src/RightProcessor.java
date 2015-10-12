@@ -21,6 +21,7 @@ public class RightProcessor{
             // found a black pixel
             if(glyph[i][j] == 0) {
                 // j+1 within bounds
+
                 if(j+1 <= wi) {
                     // pixel immediately right of black pixel is white,
                     // so make returnGlyph[i][j] a right edge
