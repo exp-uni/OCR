@@ -30,7 +30,7 @@ public class SegmentScan{
     for(int i = 0; i < hi; i++) {
     	for(int j = 0; j < wi; j++) {
     		// found a black pixel
-    		if(rightGlyph[i,j] == 0) {
+    		if(rightGlyph[i][j] == 0) {
     			// make a new coord
     			Coord tempCoord = new Coord(i, j);
     			// update numSeg and numCoords
