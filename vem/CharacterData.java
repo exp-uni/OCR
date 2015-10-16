@@ -37,9 +37,11 @@ public class CharacterData {
 					SegmentData thisSeg = new SegmentData(START_X, START_Y, LEFTMOST,RIGHTMOST,STRAIGHT_PART_PREVIOUS,STRAIGHT_PART, END_X,END_Y);
 					if(END_X == START_X && END_Y == START_Y)
 						resetData();
-					else
-					segmentDatas.add(thisSeg);
-				}
+					else{
+						segmentDatas.add(thisSeg);
+						resetData();
+						}
+					}
 				
 			}
 		}
