@@ -1,4 +1,4 @@
-
+import java.lang.reflect.Array;
 
 public class OCR{
   RightProcessor rightscan;
@@ -16,8 +16,8 @@ public class OCR{
   }
   
   public char getCharacter(int[][] glyph){
-    int he = glyph.length(); //height of image
-    int wi = glyph[0].length(); // width of image
+    int he = Array.getLength(glyph); //height of image
+    int wi = Array.getLength(glyph[0]); // width of image
     
     
     return('a');

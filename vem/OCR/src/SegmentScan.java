@@ -1,4 +1,6 @@
-public class Coord{
+import java.lang.reflect.Array;
+
+class Coord{
 	public int x;
 	public int y;
 
@@ -10,27 +12,32 @@ public class Coord{
 }
 
 public class SegmentScan{
+	
+  public SegmentScan(){
+		
+	}
+	
+	
+  public void scan(int [][] rightGlyph){
   
-  SegmentScan(int [][] rightGlyph){
-  
-  // a double array of coords used to store segment data
-  Coord [][] segments; 
+	  // a double array of coords used to store segment data
+	  Coord [][] segments; 
+		/*
+	  // number of segments found
+	  int numSeg = rightGlyph.getLength(segments);
+	  // number of coords in current segment
+	  int numCoords = rightGlyph.getLength(segments[0]);
+		*/
+	  int hi = Array.getLength(rightGlyph);
+	  int wi = Array.getLength(rightGlyph[0]);
 
-  // number of segments found
-  int numSeg = Array.getLength(segments);
-  // number of coords in current segment
-  int numCoords = Array.getLength(segments[0]);
+	  Coord segments = new Coord(hi,wi);
 
-  int hi = Array.getLength(glyph);
-  int wi = Array.getLength(glyph[0]);
-
-  Coord tempCoord = new Coord(0,0);
-
- 	// iterate through rightGlyph looking for segment data
+ 		// iterate through rightGlyph looking for segment data
     for(int i = 0; i < hi; i++) {
     	for(int j = 0; j < wi; j++) {
     		// found a black pixel
-    		if(rightGlyph[i,j] == 0) {
+    		if(rightGlyph[i][j] == 0){
     			// make a new coord
     			Coord tempCoord = new Coord(i, j);
     			// update numSeg and numCoords

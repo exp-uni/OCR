@@ -1,13 +1,12 @@
-
-
+import java.lang.reflect.Array;
 
 public class RightProcessor{
 
   int[][] RightProcessor(int [][] glyph){
-      int [][] returnGlyph;
+      
       int hi = Array.getLength(glyph);
       int wi = Array.getLength(glyph[0]);
-
+      int [][] returnGlyph = new int[hi][wi];
       // initialize return matrix
       for(int i = 0; i < hi; i++) {
         for(int j = 0; j < wi; j++) {

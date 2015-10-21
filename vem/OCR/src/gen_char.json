@@ -1,15 +1,16 @@
-{
-  "segments":
+"{
+  'segments':
   [
     {
-      "top":"True",
-      "left":"True",
-      "short":"True",
-      "straight":"True",
-      "line":"True",
-      "rightSidedLine":"True",
-      "rightSidedCurve":"True"
+      'top':'True',
+      'left':'True',
+      'short':'True',
+      'straight':'True',
+      'line':'True',
+      'rightSidedLine':'True',
+      'rightSidedCurve':'True'
     }
     
   ]
 }
+"

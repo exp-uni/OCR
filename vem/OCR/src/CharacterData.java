@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class CharacterData {
 
 private ArrayList<SegmentData> segmentDatas;
