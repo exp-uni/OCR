@@ -19,7 +19,6 @@ public class OCR{
     int he = Array.getLength(glyph); //height of image
     int wi = Array.getLength(glyph[0]); // width of image
     
-    
     return('a');
   }
   
