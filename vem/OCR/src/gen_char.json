@@ -7,8 +7,8 @@
       'short':'True',
       'straight':'True',
       'line':'True',
-      'rightSidedLine':'True',
-      'rightSidedCurve':'True'
+      'leftSidedLine':'True',
+      'leftSidedCurve':'True'
     }
     
   ]

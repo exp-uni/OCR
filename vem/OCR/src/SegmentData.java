@@ -1,15 +1,9 @@
-
+package OCR;
+import OCR.SegmentFactory;
 
 public class SegmentData {
-	private boolean top;
-	private boolean left;
-	private boolean little;
-	private boolean straight;
-	private boolean line;
-	private boolean rightSidedLine;
-	private boolean rightSidedCurve;
 	
-	private int START_X, START_Y, LEFTMOST,RIGHTMOST,STRAIGHT_PART_PREVIOUS,STRAIGHT_PART, END_X,END_Y;
+ 	public int START_X, START_Y, LEFTMOST,RIGHTMOST,STRAIGHT_PART_PREVIOUS,STRAIGHT_PART, END_X,END_Y;
 	public SegmentData(int START_X, int START_Y,
 			int LEFTMOST, int RIGHTMOST,
 			int STRAIGHT_PART_PREVIOUS,
@@ -36,16 +30,8 @@ public class SegmentData {
 			else return 1;
 		else return 1;
 	}*/
-	
-	public boolean[] getSegmentData(){
-		boolean[] toReturn = 
-			{top,
-			left,
-			little,
-			straight,
-			line,
-			rightSidedLine,
-			rightSidedCurve};    	
-		return toReturn;
+
+	public Segment getSegmentData(){    	
+		return SegmentFactory.buildSegment(this);
 	}
 }

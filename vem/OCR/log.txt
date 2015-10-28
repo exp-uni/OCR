@@ -3,37 +3,6 @@ Buildfile: /home/mark/Documents/school/OCR/vem/OCR/build.xml
 compile:
     [javac] /home/mark/Documents/school/OCR/vem/OCR/build.xml:4: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
     [javac] Compiling 19 source files to /home/mark/Documents/school/OCR/vem/OCR/bin
-    [javac] /home/mark/Documents/school/OCR/vem/OCR/src/SegmentData.java:14: error: cannot find symbol
-    [javac] 	little_seg,
-    [javac] 	^
-    [javac]   symbol:   variable little_seg
-    [javac]   location: class SegmentData
-    [javac] /home/mark/Documents/school/OCR/vem/OCR/src/SegmentScan.java:34: error: variable segments is already defined in method scan(int[][])
-    [javac] 	  Coord segments = new Coord(hi,wi);
-    [javac] 	        ^
-    [javac] /home/mark/Documents/school/OCR/vem/OCR/src/SegmentScan.java:44: error: cannot find symbol
-    [javac]     			numSeg = Array.getLength(segments);
-    [javac]     			^
-    [javac]   symbol:   variable numSeg
-    [javac]   location: class SegmentScan
-    [javac] /home/mark/Documents/school/OCR/vem/OCR/src/SegmentScan.java:45: error: cannot find symbol
-    [javac]     			numCoords = Array.getLength(segments[0]);
-    [javac]     			^
-    [javac]   symbol:   variable numCoords
-    [javac]   location: class SegmentScan
-    [javac] /home/mark/Documents/school/OCR/vem/OCR/src/SegmentScan.java:47: error: cannot find symbol
-    [javac]     			segments[numSeg][numCoords] = tempCoord;
-    [javac]     			         ^
-    [javac]   symbol:   variable numSeg
-    [javac]   location: class SegmentScan
-    [javac] /home/mark/Documents/school/OCR/vem/OCR/src/SegmentScan.java:47: error: cannot find symbol
-    [javac]     			segments[numSeg][numCoords] = tempCoord;
-    [javac]     			                 ^
-    [javac]   symbol:   variable numCoords
-    [javac]   location: class SegmentScan
-    [javac] 6 errors
 
-BUILD FAILED
-/home/mark/Documents/school/OCR/vem/OCR/build.xml:4: Compile failed; see the compiler error output for details.
-
-Total time: 4 seconds
+BUILD SUCCESSFUL
+Total time: 3 seconds
