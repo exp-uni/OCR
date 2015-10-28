@@ -2,4 +2,4 @@ build.sh
 *.class
 /vem/*
 
-!/vem/OCR
+!/vem/OCR/*
