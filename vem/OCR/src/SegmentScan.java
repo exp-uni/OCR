@@ -21,17 +21,16 @@ public class SegmentScan{
   public void scan(int [][] rightGlyph){
   
 	  // a double array of coords used to store segment data
-	  Coord [][] segments; 
-		/*
+  	  // I just set it to 100x100 2d array, will make it dynamic later - Joe
+	  Coord [][] segments = new Coord [100][100];
+
 	  // number of segments found
-	  int numSeg = rightGlyph.getLength(segments);
+	  int numSegs = 0;
 	  // number of coords in current segment
-	  int numCoords = rightGlyph.getLength(segments[0]);
-		*/
+	  int numCoords = 0;
+
 	  int hi = Array.getLength(rightGlyph);
 	  int wi = Array.getLength(rightGlyph[0]);
-
-	  Coord segments = new Coord(hi,wi);
 
  		// iterate through rightGlyph looking for segment data
     for(int i = 0; i < hi; i++) {
@@ -41,10 +40,10 @@ public class SegmentScan{
     			// make a new coord
     			Coord tempCoord = new Coord(i, j);
     			// update numSeg and numCoords
-    			numSeg = Array.getLength(segments);
-    			numCoords = Array.getLength(segments[0]);
+    			numSegs = Array.getLength(segments);
+    			numCoords = Array.getLength(segments[numCoords]);
     			// add tempCoord to 2d segments array
-    			segments[numSeg][numCoords] = tempCoord;
+    			segments[numSegs][numCoords] = tempCoord;
 
     			// set rightGlyph[i][j] to a white pixel, so we don't process it twice
     			rightGlyph[i][j] = 1;
