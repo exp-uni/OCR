@@ -2,11 +2,11 @@ package OCR;
 import java.lang.Math;
 import OCR.Segment;
 
-/*
-This class builds segments
-
-
-*/
+/**
+ * Converts int values of a SegmentData into boolean values of a Segment
+ * @author Denny
+ *
+ */
 
 public class SegmentFactory{
   static int GlyphHeight;
@@ -20,7 +20,7 @@ public class SegmentFactory{
   public static Segment buildSegment(SegmentData seg){
     return(buildSegment(GlyphHeight,GlyphWidth,seg));
   }
-  public static Segment buildSegment(int GlyphHeight, int GlyphWidth, SegmentData seg){
+  public static Segment buildSegment(int GlyphWidth, int GlyphHeight, SegmentData seg){
     Segment finalSeg = new Segment();
     int height = Math.abs(seg.START_Y - seg.END_Y);
     int width = Math.abs(seg.LEFTMOST - seg.RIGHTMOST);
