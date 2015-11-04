@@ -34,7 +34,7 @@ public class OCRX {
 		List<String> records = new ArrayList<String>();
 		
 		// need to change the directory for your machine.  This could probably be changed to be universal.
-		BufferedReader bufferedReader = new BufferedReader(new FileReader("/E:/GitHub/OCR/vem/gifs/tnr/" + chara + ".txt"));
+		BufferedReader bufferedReader = new BufferedReader(new FileReader("/E:/GitHub/OCR/tnr/" + chara + ".txt"));
 		
 		while((line = bufferedReader.readLine()) != null) {
 			records.add(line);
