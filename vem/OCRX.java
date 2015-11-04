@@ -1,5 +1,5 @@
 import java.io.*;
-import java.awt.*;
+//import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.event.*;
@@ -27,7 +27,42 @@ public class OCRX {
 		int dotIndex = classString.lastIndexOf(".");
 		return classString.substring(dotIndex+1);
 	}
-
+	
+	// helper method for getTNRChar()
+	public static List<String> readFileInTNR(String chara) throws Exception {
+		String line = null;
+		List<String> records = new ArrayList<String>();
+		
+		// need to change the directory for your machine.  This could probably be changed to be universal.
+		BufferedReader bufferedReader = new BufferedReader(new FileReader("/E:/GitHub/OCR/vem/gifs/tnr/" + chara + ".txt"));
+		
+		while((line = bufferedReader.readLine()) != null) {
+			records.add(line);
+		}
+		
+		bufferedReader.close();
+		return records;
+	}
+	
+	// takes a character, reads the Times New Roman .txt representation of that character, 
+	// and returns a corresponding 2D array of 0's and 1's
+	public static int [][] getTNRChar(String chara) throws Exception {
+		List<String> records = readFileInTNR(chara);
+		
+		int [][] returnGlyph = new int [records.size()][Array.getLength(records.get(0).toCharArray())];
+		
+		char[] tempCharArray;
+		for(int i = 0; i < records.size(); i++) {
+			tempCharArray = records.get(i).toCharArray();
+			for(int j = 0; j < Array.getLength(tempCharArray); j++) {
+				if(tempCharArray[j] == '.') returnGlyph[i][j] = 1;
+				else returnGlyph[i][j] = 0;
+			}
+		}
+		
+		return returnGlyph;
+	}
+	
 	public static void main(String args[]) throws Exception { 
 		OCRX app = new OCRX();
         BWImageG image;
@@ -76,7 +111,15 @@ public class OCRX {
             }   
 			writer.println();
         }
-
+		
+		// demonstrates reading a .txt file into a int[][] 
+		int [][] glyph = getTNRChar("a");
+		for(int i = 0; i < Array.getLength(glyph); i++) {
+			for(int j = 0; j < Array.getLength(glyph[i]); j++) {
+				System.out.print(glyph[i][j]);
+			}
+			System.out.println();
+		}
 
         //System.out.println("Found characters.\n\n");
         //image.thinThickLines();
