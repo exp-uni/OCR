@@ -3,7 +3,7 @@ import OCR.SegmentFactory;
 
 public class SegmentData {
 	
- 	public int START_X, START_Y, LEFTMOST,RIGHTMOST,STRAIGHT_PART_PREVIOUS,STRAIGHT_PART, END_X,END_Y;
+ 	public int START_X, START_Y, LEFTMOST, RIGHTMOST, STRAIGHT_PART_PREVIOUS, STRAIGHT_PART, END_X,END_Y;
 	
  	public SegmentData(int START_X, int START_Y,
 			int LEFTMOST, int RIGHTMOST,
@@ -28,6 +28,6 @@ public class SegmentData {
  	 * @return
  	 */
 	public Segment getSegmentData(int glyphWidth, int glyphHeight){    	
-		return SegmentFactory.buildSegment(glyphWidth, glyphHeight,this);
+		return SegmentFactory.buildSegment(glyphWidth, glyphHeight, this);
 	}
 }

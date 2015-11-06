@@ -34,7 +34,7 @@ public class OCRX {
 		List<String> records = new ArrayList<String>();
 		
 		// need to change the directory for your machine.  This could probably be changed to be universal.
-		BufferedReader bufferedReader = new BufferedReader(new FileReader("/E:/GitHub/OCR/tnr/" + chara + ".txt"));
+		BufferedReader bufferedReader = new BufferedReader(new FileReader("/Users/nicholasgerassimakis/Desktop/OCR/OCR/tnr/" + chara + ".txt"));
 		
 		while((line = bufferedReader.readLine()) != null) {
 			records.add(line);
@@ -46,7 +46,7 @@ public class OCRX {
 	
 	// takes a character, reads the Times New Roman .txt representation of that character, 
 	// and returns a corresponding 2D array of 0's and 1's
-	public static int [][] getTNRChar(String chara) throws Exception {
+	public static int [][] getTNRChar(char chara) throws Exception {
 		List<String> records = readFileInTNR(chara);
 		
 		int [][] returnGlyph = new int [records.size()][Array.getLength(records.get(0).toCharArray())];

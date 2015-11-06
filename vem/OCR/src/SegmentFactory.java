@@ -1,6 +1,7 @@
 package OCR;
 import java.lang.Math;
 import OCR.Segment;
+import ../OCRX
 
 /**
  * Converts int values of a SegmentData into boolean values of a Segment
@@ -28,18 +29,23 @@ public class SegmentFactory{
     int leftdist = Math.abs(seg.LEFTMOST - seg.START_X);
     int rightdist = Math.abs(seg.RIGHTMOST - seg.START_X);
     
+    //Determines if segment is in top/bottom of character
     if(seg.START_Y < GlyphHeight/2){
       finalSeg.seg_top = true;
     }
     else{
       finalSeg.seg_top = false;
     }
+      
+    //Determines if segment is right/left of character
     if(seg.START_X < GlyphWidth/2){
       finalSeg.seg_left = true;
     }
     else{
       finalSeg.seg_left = false;
     }
+      
+      
     if(height > ((GlyphHeight*3)/4)){
       finalSeg.seg_short = true;
     }

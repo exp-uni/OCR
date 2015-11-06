@@ -7,9 +7,8 @@ import java.util.ArrayList;
  *
  */
 public class Character {
-
-	
 	ArrayList<Segment> segments;
+    
 	public Character(){
 		segments = new ArrayList<Segment>();
 	}

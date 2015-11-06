@@ -1,3 +1,6 @@
+package OCR;
+import OCR.*;
+
 
 /*
 This class will test the other files in the OCR package, and may also be used to insert
