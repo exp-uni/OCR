@@ -29,12 +29,12 @@ public class OCRX {
 	}
 	
 	// helper method for getTNRChar()
-	public static List<String> readFileInTNR(String chara) throws Exception {
+	public static List<String> readFileInTNR(char chara) throws Exception {
 		String line = null;
 		List<String> records = new ArrayList<String>();
 		
 		// need to change the directory for your machine.  This could probably be changed to be universal.
-		BufferedReader bufferedReader = new BufferedReader(new FileReader("/Users/nicholasgerassimakis/Desktop/OCR/OCR/tnr/" + chara + ".txt"));
+		BufferedReader bufferedReader = new BufferedReader(new FileReader("../tnr/" + chara + ".txt"));
 		
 		while((line = bufferedReader.readLine()) != null) {
 			records.add(line);
@@ -113,7 +113,7 @@ public class OCRX {
         }
 		
 		// demonstrates reading a .txt file into a int[][] 
-		int [][] glyph = getTNRChar("a");
+		int [][] glyph = getTNRChar('a');
 		for(int i = 0; i < Array.getLength(glyph); i++) {
 			for(int j = 0; j < Array.getLength(glyph[i]); j++) {
 				System.out.print(glyph[i][j]);
