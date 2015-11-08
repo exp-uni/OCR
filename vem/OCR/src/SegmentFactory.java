@@ -1,7 +1,7 @@
 package OCR;
 import java.lang.Math;
 import OCR.Segment;
-import ../OCRX
+import OCR.OCRX;
 
 /**
  * Converts int values of a SegmentData into boolean values of a Segment
