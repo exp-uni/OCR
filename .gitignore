@@ -1,0 +1,5 @@
+build.sh
+*.class
+/vem/*
+
+!/vem/OCR/*
