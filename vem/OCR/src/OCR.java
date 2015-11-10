@@ -1,4 +1,7 @@
 import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 public class OCR{
     RightProcessor rightscan;
@@ -10,6 +13,7 @@ public class OCR{
      Eventually it will load up a premade dictionary of segment pieces.
      
      */
+     
     OCR(){
         rightscan = new RightProcessor();
         segmentScan = new SegmentScan();
@@ -23,13 +27,14 @@ public class OCR{
     }
     
     
-    // helper method for getTNRChar()
-    public static List<String> readFileInTNR(String chara) throws Exception {
+    //helper method for getTNRChar()
+    
+    public static ArrayList<String> readFileInTNR(char chara) throws Exception {
         String line = null;
-        List<String> records = new ArrayList<String>();
+        ArrayList<String> records = new ArrayList<String>();
         
         // need to change the directory for your machine.  This could probably be changed to be universal.
-        BufferedReader bufferedReader = new BufferedReader(new FileReader("/Users/nicholasgerassimakis/Desktop/OCR/OCR/tnr/" + chara + ".txt"));
+        BufferedReader bufferedReader = new BufferedReader(new FileReader("/tnr/" + chara + ".txt"));
         
         while((line = bufferedReader.readLine()) != null) {
             records.add(line);
@@ -39,10 +44,12 @@ public class OCR{
         return records;
     }
     
-    // takes a character, reads the Times New Roman .txt representation of that character,
-    // and returns a corresponding 2D array of 0's and 1's
+    /*
+    takes a character, reads the Times New Roman .txt representation of that character,
+    and returns a corresponding 2D array of 0's and 1's
+    */
     public static int [][] getTNRChar(char chara) throws Exception {
-        List<String> records = readFileInTNR(chara);
+        ArrayList<String> records = readFileInTNR(chara);
         
         int [][] returnGlyph = new int [records.size()][Array.getLength(records.get(0).toCharArray())];
         
