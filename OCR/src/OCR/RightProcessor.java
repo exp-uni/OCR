@@ -1,3 +1,4 @@
+package OCR;
 import java.lang.reflect.Array;
 
 public class RightProcessor{

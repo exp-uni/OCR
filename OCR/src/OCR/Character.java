@@ -2,6 +2,8 @@ package OCR;
 
 import java.util.ArrayList;
 
+import OCR.Segment;
+
 /**
  * Holds boolean values identifying each segment
  *

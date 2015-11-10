@@ -1,0 +1,16 @@
+"{
+  'segments':
+  [
+    {
+      'top':'True',
+      'left':'True',
+      'short':'True',
+      'straight':'True',
+      'line':'True',
+      'leftSidedLine':'True',
+      'leftSidedCurve':'True'
+    }
+    
+  ]
+}
+"

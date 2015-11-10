@@ -1,4 +1,5 @@
 package OCR;
+import OCR.Segment;
 import OCR.SegmentFactory;
 
 public class SegmentData {

@@ -1,6 +1,5 @@
 package OCR;
 import OCR.SegmentFactory;
-import ../OCRX;
 
 
 public class TestSegmentFactory{
@@ -12,10 +11,7 @@ public class TestSegmentFactory{
         
         
         
-        int[][] a = getTNRChar('a');
-        for(int i : a){
-            System.out.print(i);
-        }
+        //int[][] a = getTNRChar('a');
         
         //SegmentData test1 = new SegmentData();
     }

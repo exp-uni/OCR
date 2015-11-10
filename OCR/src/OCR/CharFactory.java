@@ -2,6 +2,8 @@ package OCR;
 
 import java.util.ArrayList;
 
+import OCR.Segment;
+
 /**
  * @author Dennis and Chris
  * input - right side scanned glyph
