@@ -1,8 +1,0 @@
-Buildfile: /home/mark/Documents/school/OCR/vem/OCR/build.xml
-
-compile:
-    [javac] /home/mark/Documents/school/OCR/vem/OCR/build.xml:4: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
-    [javac] Compiling 19 source files to /home/mark/Documents/school/OCR/vem/OCR/bin
-
-BUILD SUCCESSFUL
-Total time: 3 seconds
