@@ -8,3 +8,9 @@ SegmentScan: Processes the right-edge version of the image
 
 
 TestMain: Used for testing OCR package
+
+build.sh
+*.class
+/vem/*
+
+!/vem/OCR/*
