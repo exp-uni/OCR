@@ -1,6 +1,8 @@
 build.sh
+/bin/OCR/*.class
 *.class
 /vem/*
 
 !/vem/OCR/*
 /.metadata/*
+.project
