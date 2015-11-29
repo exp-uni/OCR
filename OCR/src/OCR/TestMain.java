@@ -11,5 +11,13 @@ parts of the package
 public class TestMain{
   public static void main(String[] args){
 	  
+	  RightProcessor test = new RightProcessor();
+		
+		int[][] tester1 =  {{1, 1, 1, 0, 0, 0},
+    			{1, 0, 1, 1, 1, 0},
+    			{1, 0, 1, 1, 1, 0},
+    			{1, 0, 1, 0, 0, 0}};
+		test.process(tester1);
+
   }
 }

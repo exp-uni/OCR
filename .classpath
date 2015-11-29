@@ -3,5 +3,6 @@
 	<classpathentry kind="src" output="bin" path="src"/>
 	<classpathentry kind="var" path="JRE_LIB" sourcepath="JRE_SRC"/>
 	<classpathentry kind="lib" path="C:/Users/Mark/Documents/Programming/school/Java/OCR/Junit/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Mark/Documents/Programming/school/Java/OCR/Junit/hamcrest-core-1.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
