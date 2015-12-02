@@ -3,7 +3,7 @@ import java.lang.reflect.Array;
 
 public class RightProcessor{
 
-  int[][] process(int [][] glyph){
+  static int[][] process(int [][] glyph){
       
       int hi = Array.getLength(glyph);
       int wi = Array.getLength(glyph[0]);
@@ -49,7 +49,7 @@ public class RightProcessor{
       return returnGlyph;
   }
   
-  private void output(int[][] glyph){
+  private static void output(int[][] glyph){
 	  String nums;
       for(int[] row : glyph){
     	  nums = "";
