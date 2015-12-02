@@ -1,12 +1,11 @@
-package OCR;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
-public class OCR{
-    RightProcessor rightscan;
-    SegmentScan segmentScan;
+public class OCR {
+    /*RightProcessor rightscan;
+    SegmentScan segmentScan;*/
     
     
     /*
@@ -15,7 +14,7 @@ public class OCR{
      
      */
      
-    OCR(){
+    /*OCR(){
         rightscan = new RightProcessor();
         segmentScan = new SegmentScan();
     }
@@ -26,7 +25,7 @@ public class OCR{
         
         return('a');
     }
-    
+    */
     
     //helper method for getTNRChar()
     
@@ -35,7 +34,7 @@ public class OCR{
         ArrayList<String> records = new ArrayList<String>();
         
         // need to change the directory for your machine.  This could probably be changed to be universal.
-        BufferedReader bufferedReader = new BufferedReader(new FileReader("/tnr/" + chara + ".txt"));
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(chara + ".txt"));
         
         while((line = bufferedReader.readLine()) != null) {
             records.add(line);
@@ -64,6 +63,18 @@ public class OCR{
         }
         
         return returnGlyph;
+    }
+
+    public static void main(String[] args) {
+        int [][] g1;
+
+        try { 
+            g1 = getTNRChar('a');
+            System.out.println(g1);
+        }
+        catch(Exception e) {
+            System.out.println("Error");
+        } 
     }
     
     
