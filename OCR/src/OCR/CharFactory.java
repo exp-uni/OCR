@@ -7,9 +7,19 @@ public class CharFactory {
 	private SegmentData curSegment;
 	
 	
+	
+	//SEND GLPYHS TO THIS METHOD, RECIEVE UNKNOWN CHARACTER
 	public Character scan(int[][] glyph){
 		curChar = new Character();
-		
+		int x,y;
+		for(x=0;x<glyph.length;x++){
+			for(y=0;y<glyph[0].length;y++){
+				if(glyph[x][y]==0 && checkNext(x,y)[0] != -1){//ugly, but basically ensures a segment was found rather than a single dot
+					foundSegment(x,y);
+				}
+			}
+			
+		}
 		
 		
 		
@@ -22,13 +32,17 @@ public class CharFactory {
 		curSegment.START_X = x;
 		curSegment.START_Y = y;
 		int[] next = checkNext(x,y);
-		while(next[0] != -1){
-			
-			
+		while(next[0] != -1){		
 			next = checkNext(next[0],next[1]);
+			proccessNext(next);
 		}
 	}
 	
+	private void proccessNext(int[] next) {
+		//basically just do the algorithm stuff here.
+		
+	}
+
 	public int[] checkNext(int x, int y){
 		
 		//x+1
@@ -45,5 +59,7 @@ public class CharFactory {
 		}
 		return(new int[]{-1});
 	}
+	
+	
 	
 }
