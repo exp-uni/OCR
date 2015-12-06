@@ -4,7 +4,17 @@ import OCR.SegmentFactory;
 
 public class SegmentData {
 	
- 	public int 
+ 	public SegmentData(int x, int y) {
+ 		START_X=x;
+ 		START_Y=y;
+ 		LEFTMOST=y;
+ 		RIGHTMOST=y;
+ 		STRAIGHT_PART_PREVIOUS=0;
+ 		STRAIGHT_PART=1;
+ 		
+	}
+
+	public int 
  	START_X,
  	START_Y, 
  	LEFTMOST, 
@@ -13,6 +23,12 @@ public class SegmentData {
  	STRAIGHT_PART, 
  	END_X,
  	END_Y;
+
+	public void end(int x, int y) {
+		END_X=x;
+		END_Y=y;
+		
+	}
 	
 
  	

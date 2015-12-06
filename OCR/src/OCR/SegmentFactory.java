@@ -9,21 +9,21 @@ import OCR.Segment;
  */
 
 public class SegmentFactory{
-  static int GlyphHeight;
-  static int GlyphWidth;
+  private int GlyphHeight;
+  private int GlyphWidth;
   
   
   public SegmentFactory(){
     
     
   }
-  public static Segment buildSegment(SegmentData seg){
+  public Segment buildSegment(SegmentData seg){
     return(buildSegment(GlyphHeight,GlyphWidth,seg));
   }
-  public static Segment buildSegment(int GlyphWidth, int GlyphHeight, SegmentData seg){
+  public Segment buildSegment(int GlyphWidth, int GlyphHeight, SegmentData seg){
     Segment finalSeg = new Segment();
     int height = Math.abs(seg.START_Y - seg.END_Y);
-    int width = Math.abs(seg.LEFTMOST - seg.RIGHTMOST);
+    int width = Math.abs(seg.LEFTMOST - seg.RIGHTMOST); //so apparently this is in the algorithm despite not being used in calculation
     int gap = Math.abs(seg.START_X - seg.END_X);
     int leftdist = Math.abs(seg.LEFTMOST - seg.START_X);
     int rightdist = Math.abs(seg.RIGHTMOST - seg.START_X);
