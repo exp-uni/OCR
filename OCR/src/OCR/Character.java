@@ -18,4 +18,10 @@ public class Character {
 	public void addSegment(Segment seg){
 		segments.add(seg);
 	}
+	
+	public void output(){
+		for(Segment seg: segments){
+			System.out.println(seg.toString());
+		}
+	}
 }

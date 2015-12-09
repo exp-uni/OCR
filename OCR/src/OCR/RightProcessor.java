@@ -3,7 +3,7 @@ import java.lang.reflect.Array;
 
 public class RightProcessor{
 
-  static int[][] process(int [][] glyph){
+  public static int[][] process(int [][] glyph){
       
       int hi = Array.getLength(glyph);
       int wi = Array.getLength(glyph[0]);

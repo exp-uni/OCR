@@ -10,18 +10,32 @@ parts of the package
 */
 public class TestMain{
   public static void main(String[] args){
-	  RightProcessor test = new RightProcessor();
-	  int[][] tester1 = {{1,1,1,0,0,0},
-			  {1,0,1,1,1,0},
-			  {1,0,1,1,1,0},
-			  {1,0,1,0,0,0}};
-	  test.process(tester1);
+
 	  
+	  int[][] tester1 = {{0,1,1,1,1,0,0,0},
+			  {0,1,1,0,1,1,1,0},
+			  {1,0,1,0,1,1,1,0},
+			  {1,1,1,0,1,0,0,0},
+			  {1,1,1,0,1,0,0,0},
+			  {1,1,0,1,1,1,0,0},
+			  {1,0,1,1,1,0,1,0},
+			  {1,1,1,1,1,0,0,0},
+			  {1,1,1,1,1,0,0,0},
+			  {1,1,1,1,1,0,0,0}};
+	  int[][] testglyph = RightProcessor.process(tester1);
+	  
+
+	  	
+	  
+	  Character testchar = CharFactory.scan(testglyph);
+	  testchar.output();
+	 /* 
 	  Segment segTest0 = new Segment();
 	  System.out.println(segTest0.toString());
 	  
 	  Segment segTest1 = new Segment(true, false, true, false, true, false, true);
 	  System.out.println(segTest1.toString());
+	  */
   }
 
 }

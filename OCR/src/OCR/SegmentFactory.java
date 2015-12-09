@@ -22,14 +22,14 @@ public class SegmentFactory{
   }
   public Segment buildSegment(int GlyphWidth, int GlyphHeight, SegmentData seg){
     Segment finalSeg = new Segment();
-    int height = Math.abs(seg.START_Y - seg.END_Y);
+    int height = Math.abs(seg.START_X - seg.END_X);
     int width = Math.abs(seg.LEFTMOST - seg.RIGHTMOST); //so apparently this is in the algorithm despite not being used in calculation
-    int gap = Math.abs(seg.START_X - seg.END_X);
-    int leftdist = Math.abs(seg.LEFTMOST - seg.START_X);
-    int rightdist = Math.abs(seg.RIGHTMOST - seg.START_X);
+    int gap = Math.abs(seg.START_Y - seg.END_Y);
+    int leftdist = Math.abs(seg.LEFTMOST - seg.START_Y);
+    int rightdist = Math.abs(seg.RIGHTMOST - seg.START_Y);
     
     //Determines if segment is in top/bottom of character
-    if(seg.START_Y < GlyphHeight/2){
+    if(seg.START_X < GlyphHeight/2){
       finalSeg.seg_top = true;
     }
     else{
@@ -37,14 +37,15 @@ public class SegmentFactory{
     }
       
     //Determines if segment is right/left of character
-    if(seg.START_X < GlyphWidth/2){
+    
+    if(seg.START_Y < GlyphWidth/2){
       finalSeg.seg_left = true;
     }
     else{
       finalSeg.seg_left = false;
     }
       
-      
+    System.out.println(height);
     if(height > ((GlyphHeight*3)/4)){
       finalSeg.seg_short = true;
     }
@@ -59,7 +60,8 @@ public class SegmentFactory{
     }
     if(seg.STRAIGHT_PART_PREVIOUS > ((height*3)/4)){
       finalSeg.seg_line = true;
-      if(seg.START_X > seg.END_X){
+      finalSeg.seg_leftSidedCurve = false;
+      if(seg.START_Y > seg.END_Y){
         finalSeg.seg_leftSidedLine = true;
       }
       else{
@@ -68,6 +70,7 @@ public class SegmentFactory{
     }
     else{
       finalSeg.seg_line = false;
+      finalSeg.seg_leftSidedLine = false;
       if(leftdist > rightdist){
         finalSeg.seg_leftSidedCurve = true;
       }
@@ -86,7 +89,12 @@ public class SegmentFactory{
   public void SetWidth(int GlyphWidth){
     this.GlyphWidth = GlyphWidth;
   }
-  
+  public int getHeight(){
+	  return(this.GlyphHeight);
+  }
+  public int getWidth(){
+	  return(this.GlyphWidth);
+  }
 
   
 }
