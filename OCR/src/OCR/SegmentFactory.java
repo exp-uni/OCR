@@ -44,8 +44,7 @@ public class SegmentFactory{
     else{
       finalSeg.seg_left = false;
     }
-      
-    System.out.println(height);
+
     if(height > ((GlyphHeight*3)/4)){
       finalSeg.seg_short = true;
     }
