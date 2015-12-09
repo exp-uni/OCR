@@ -41,6 +41,29 @@ public class TestMain{
 		e.printStackTrace();
 	}
 	
+	int[][] testChar = new int[character.size()][character.get(0).length];
+	
+	int i = 0;
+	int j = 0;
+	for(int[] row: character){
+		j = 0;
+		for(int num : row){
+			testChar[i][j] = num;
+			j++;
+		}
+		i++;
+	}
+	int[][] testglyph = RightProcessor.process(testChar);
+	  
+
+  	
+	  
+	  Character testchar = CharFactory.scan(testglyph);
+	  testchar.output();
+	  
+	  /*
+	
+	
 	  
 	  int[][] tester1 = {{0,1,1,1,1,0,0,0},
 			  {0,1,1,0,1,1,1,0},
@@ -59,6 +82,8 @@ public class TestMain{
 	  
 	  Character testchar = CharFactory.scan(testglyph);
 	  testchar.output();
+	 */
+	 
 	 /* 
 	  Segment segTest0 = new Segment();
 	  System.out.println(segTest0.toString());
