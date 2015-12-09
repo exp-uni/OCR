@@ -19,7 +19,7 @@ public class CharFactory {
 		segFact.SetHeight(height);
 		segFact.SetWidth(width);
 		int x,y;
-		for(x=0; x <= height-1; x++){
+		for(x=0; x <= height-2; x++){
 			for(y=0;y <= width-1;y++){
 				//System.out.println(y);
 				if(curGlyph[x][y]==0 && checkNext(x,y)[0] != -1){//ugly, but basically ensures a segment was found rather than a single dot

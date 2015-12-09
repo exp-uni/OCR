@@ -82,7 +82,7 @@ public class TestMain{
 	  
 	  Character testchar = CharFactory.scan(testglyph);
 	  testchar.output();
-	 */
+	 
 	 
 	 /* 
 	  Segment segTest0 = new Segment();
